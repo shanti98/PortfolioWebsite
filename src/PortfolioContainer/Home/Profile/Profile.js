@@ -44,7 +44,7 @@ export default function Profile() {
                     1000,
                     "Avid Learner",
                     1000,
-                    "JavaScript,REACT,AWS",
+                    "Javascript,AWS",
                     1000,
                   ]}
                 />
@@ -56,7 +56,7 @@ export default function Profile() {
             </span>
           </div>
           <div className="profile-options">
-            <button className="btn primary-btn">Hire Me{""}</button>
+            <button className="btn primary-btn">{""}Hire Me{""}</button>
             <a href="Shanti_Bharsadiya_Resume.pdf" download='Shanti_Bharsadiya_Resume.pdf'>
             <button className="btn highlighted-btn">Get Resume</button>
             </a>
