@@ -1,5 +1,6 @@
 import { TOTAL_SCREENS } from "./CommonUtil";
 import{Subject} from 'rxjs'
+import{object} from "prop-types";
 
 export default class ScrollService{
     static scrollHandler = new ScrollService();
@@ -26,15 +27,15 @@ export default class ScrollService{
         let elementBottom= rec.Bottom
 
         let partiallyVisible = elementTop < window.innerHeight && elementBottom >=0;
-        let completelyVisible = elementTop >= 0 && elementBottom <=window. innerHeight; 
+        let completelyVisible = elementTop >= 0 && elementBottom <=window.innerHeight; 
 
         switch(type){
             case "partial":
-                return partiallyVisible,
+                return partiallyVisible;
             case "complete":
                 return completelyVisible
-                default:
-                    return false
+            default:
+                    return false;
         }
 
 
