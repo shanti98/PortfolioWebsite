@@ -1,4 +1,4 @@
-import { TOTAL_SCREENS } from "./CommonUtil";
+import {TOTAL_SCREENS} from "./CommonUtil";
 import{Subject} from 'rxjs'
 import{object} from "prop-types";
 
@@ -12,17 +12,17 @@ export default class ScrollService{
         window.addEventListener('scroll', this.checkCurrentScreenUnderViewport);
     }
     scrollToHireMe = ()=>{
-        let ccontactMeScreen = document.getElementById ("Contact Me")
-        if(!ccontactMeScreen) return;
-        ccontactMeScreen.scrollIntoView({behavior: "smooth"})
+        let contactMeScreen = document.getElementById ("ContactMe")
+        if(!contactMeScreen) return;
+        contactMeScreen.scrollIntoView({behavior: "smooth"})
     }
     scrollToHome = ()=>{
         let homeScreen = document.getElementById ("Home")
         if(!homeScreen) return;
         homeScreen.scrollIntoView({behavior: "smooth"})
     }
-    isElementInView=(Elem,type)=>{
-        let rec= Elem.getBoundingClient();
+    isElementInView=(elem,type)=>{
+        let rec= elem.getBoundingClientRect();
         let elementTop=rec.top;
         let elementBottom= rec.Bottom
 
@@ -35,7 +35,7 @@ export default class ScrollService{
             case "complete":
                 return completelyVisible
             default:
-                    return false;
+                return false
         }
 
 
